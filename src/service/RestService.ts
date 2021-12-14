@@ -1,10 +1,12 @@
-import fs from "fs";
 import bodyParser from "body-parser";
 import cors from "cors";
 import express from "express";
+import RoomPageCreator from "@root/service/RoomPageCreator";
+import RoomLoader from "@root/service/RoomLoader";
 
 export class RestService {
-
+    roomLoader:RoomLoader = new RoomLoader();
+    roomCreator:RoomPageCreator = new RoomPageCreator();
     constructor(private expressApp,private buildVersion) {
         this.setupApi();
     }
@@ -22,31 +24,21 @@ export class RestService {
             res.json({apiVersion:apiVersion,buildVersion:this.buildVersion});
         });
 
+        router.get('/room/:sid/room.json', async (req, res) => {
+            const sid = req.params.sid;
+            this.roomLoader.loadRoomJson(sid).then((resData) => {
+                res.json(resData);
+            }).catch(err => {
+                console.error(err);
+                res.status(500).json(err);
+            })
+        });
+
         router.get('/room/:sid', async (req, res) => {
-            //open room.html page
-            // open template page
-            // compose new page
-            // add meta
-            // add preload
-            fs.readFile('/etc/hosts', 'utf8', function (err,data) {
-                if (err) {
-                    return console.log(err);
-                }
-                console.log(data);
-            });
             const sid = req.params.sid;
             try {
-                var body = "<html>" +
-                "<head>" +
-                "<meta http-equiv='Content-Type' content='text/html'" +
-                "charset=UTF-8 />" +
-                "</head>" +
-                "<body>" +
-                "<p>youve just created a page called </p>" +
-                "</body>" +
-                "</html>";
                 res.writeHead(200, {"Content-Type": "text/html"});
-                res.write(body);
+                res.write(await this.roomCreator.createRoom(sid));
                 res.end();
             } catch (err) {
                 console.error(err);
