@@ -7,14 +7,17 @@ export default class RoomPageCreator {
 
     async findCodeImport():Promise<string>{
         return new Promise((resolve, reject) => {
-            fs.readFile('public/room.html', 'utf8', (err,data) => {
+            fs.readFile('public/room/room.html', 'utf8', (err,data) => {
                 if (err) {
                     reject(err);
                 }else {
                     let lines = data.replace("\r","").split("\n");
-                    for (const line of lines) {
+                    for (let line of lines) {
                         if (line.indexOf("<script defer=\"defer\" src=\"")!== -1) {
-                            resolve(line.replace("</head>", ""));
+                            line = line.replace("<!DOCTYPE html> <html lang=\"en\"> <head>", "")
+                            line = line.replace("</head> <body> </body> </html>", "");
+                            line = line.replace("</head>", "");
+                            resolve(line);
                         }
                     }
                 }
