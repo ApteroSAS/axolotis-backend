@@ -17,7 +17,7 @@ export default class RoomLoader {
                 "https://alphahub.aptero.co/files/967334c9-4080-4c2d-9e77-9bf2ee37818d.glb",
                 "assets/static/demo2/sky.jpg"
             ],
-            "room": [
+            "entities": [
                 {
                     "type": "ecs-component-loader",
                     "module": "@root/modules/scenes/demo2/Sky2"

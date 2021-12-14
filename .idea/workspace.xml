@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d16046f7-cb75-49d7-8a3e-aed983297d95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/RoomLoader.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/RoomPageCreator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/build.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/publish.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/py_docker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loader-template/loader-black-default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/loader-template/loader-black-default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/RestService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/RestService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/RoomLoader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/RoomLoader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/WebServer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WebServer.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -33,7 +37,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../axolotis" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aptero_hub/hubs-wip" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,15 +45,18 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Workspace\ApteroVR\axolotis-backend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Workspace\ApteroVR\axolotis-backend\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\ApteroVR\axolotis-backend\public" />
+      <recent name="C:\Workspace\ApteroVR\axolotis-backend\room" />
       <recent name="C:\Workspace\ApteroVR\axolotis-backend\src" />
       <recent name="C:\Workspace\ApteroVR\axolotis-backend\public\loader-template" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workspace\ApteroVR\axolotis-backend" />
+      <recent name="C:\Workspace\ApteroVR\axolotis-backend\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -91,6 +98,7 @@
       <updated>1639236638654</updated>
       <workItem from="1639236639814" duration="7950000" />
       <workItem from="1639299297943" duration="2113000" />
+      <workItem from="1639484949841" duration="7927000" />
     </task>
     <servers />
   </component>
